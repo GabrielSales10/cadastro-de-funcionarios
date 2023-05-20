@@ -4,22 +4,29 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- Define a exibição do conteúdo em dispositivos móveis, ajustando a largura para o tamanho do dispositivo e definindo a escala inicial como 1 -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CRUD</title>
   <link rel="stylesheet" href="style.css">
+  <!-- icones da biblioteca Boxicons-->
   <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
+  <!-- agrupar todo o conteúdo principal da página -->
   <div class="container">
+    <!-- cabeçalho para exibir o título e o botão "Incluir" -->
     <div class="header">
       <span>Cadastro de Funcionários</span>
       <button onclick="openModal()" id="new">Incluir</i></button>
     </div>
 
+    <!--Cria um contenier para exibir uma tabela-->
     <div class="divTable">
       <table>
+        <!-- seção de cabeçalho da tabela -->
         <thead>
+          <!-- uma linha na tabela -->
           <tr>
             <th>Nome</th>
             <th>Função</th>
@@ -33,8 +40,11 @@
       </table>
     </div>
 
+    <!--Conteiner para a janela modal de formulario-->
     <div class="modal-container">
+      <!-- janela modal -->
       <div class="modal">
+        <!-- formulário -->
         <form>
           <label for="m-nome">Nome</label>
           <input id="m-nome" type="text" required />
@@ -48,7 +58,6 @@
         </form>
       </div>
     </div>
-
   </div>
   <script src="script.js"></script>
 </body>
