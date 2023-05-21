@@ -1,4 +1,8 @@
-const modal = document.querySelector('.modal-container')
+/*selecionando o elemento HTML que possui a classe "modal-container" 
+e o armazenando na variável modal para uso posterior. */
+/*No caso, o seletor utilizado é '.modal-container', que representa 
+uma classe CSS chamada "modal-container". O método querySelector() retorna uma referência para o elemento encontrado,
+ou null caso nenhum elemento corresponda ao seletor. */
 const tbody = document.querySelector('tbody')
 const sNome = document.querySelector('#m-nome')
 const sFuncao = document.querySelector('#m-funcao')
