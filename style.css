@@ -1,22 +1,32 @@
+/* google fontes */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700&family=Roboto:wght@100;300;400;500;700;900&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap');
 
+/* todos os componentes da página*/
 * {
+  /*área de margem*/
   margin: 0;
+  /*distancia interna entre o elemento e sua borda*/
   padding: 0;
+  /*tamanho levará em conta a borda*/
   box-sizing: border-box;
+  /*fonte*/
   font-family: 'Poppins', sans-serif;
 }
 
 body {
   width: 100vw;
   height: 100vh;
+  /* contêiner flexível */
   display: flex;
+  /*alinhamento vertical centralizado*/
   align-items: center;
+  /*alinhamento horizontal centralizado*/
   justify-content: center;
   background-color: rgba(0,0,0,0.1);
 }
 
 button {
+  /*mouse está sobre o botão*/
   cursor: pointer;
 }
 
@@ -31,6 +41,8 @@ button {
   min-height: 70px;
   display: flex;
   align-items: center;
+  /*espaço restante seja distribuído igualmente entre os elementos, 
+  empurrando-os para as extremidades do contêiner*/
   justify-content: space-between;
   margin: auto 12px;
 }
@@ -53,7 +65,9 @@ button {
 .divTable {
   padding: 10px;
   width: auto; 
+  /*mesma altura do seu elemento pai*/
   height:inherit; 
+  /*add barras de rolagem quando o conteudo exceder o espaço disponivel */
   overflow:auto;
 }
 
@@ -149,6 +163,7 @@ tbody tr td.acao {
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.5);
+  /*elemento não será renderizado e não ocupará espaço no layout.*/
   display: none;
   z-index: 999;
   align-items: center;
@@ -157,6 +172,7 @@ tbody tr td.acao {
 
 .modal {
   display: flex;
+  /*os itens dentro do contêiner serão dispostos verticalmente em uma única coluna*/
   flex-direction: column;
   align-items: center;
   padding: 40px;
@@ -172,6 +188,7 @@ tbody tr td.acao {
 
 .modal input {
   width: 100%;
+  /*a borda de destaque é removida*/
   outline: none;
   padding: 5px 10px; 
   width: 100%;
@@ -203,11 +220,15 @@ tbody tr td.acao {
 
 @keyframes modal {
   from {
+    /*transparente*/
     opacity: 0;
+    /*transformação 3d, movendo-o verticalmente em -60 pixels*/
     transform: translate3d(0, -60px, 0);
   }
   to {
+    /*visível*/
     opacity: 1;
+    /*posição inicial*/
     transform: translate3d(0, 0, 0);
   }
 }
